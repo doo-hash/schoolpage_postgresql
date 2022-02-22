@@ -2,9 +2,11 @@ package com.mockpage.schoolwebapp.schoolpage.home.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.mockpage.schoolwebapp.schoolpage.home.model.GuestUser;
 
+@Transactional
 @Repository
 public interface GuestUserRepository extends JpaRepository<GuestUser,Long> {
 

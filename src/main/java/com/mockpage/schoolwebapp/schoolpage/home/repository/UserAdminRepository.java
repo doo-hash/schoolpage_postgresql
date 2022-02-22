@@ -4,9 +4,11 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.mockpage.schoolwebapp.schoolpage.home.model.Admin;
 
+@Transactional
 @Repository
 public interface UserAdminRepository extends JpaRepository<Admin,Long> {
 

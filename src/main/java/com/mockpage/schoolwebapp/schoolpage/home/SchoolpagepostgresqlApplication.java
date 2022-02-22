@@ -1,6 +1,8 @@
 package com.mockpage.schoolwebapp.schoolpage.home;
 
 
+import java.time.LocalDate;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -8,22 +10,26 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import com.mockpage.schoolwebapp.schoolpage.home.model.Admissions;
+import com.mockpage.schoolwebapp.schoolpage.home.model.Courses;
+import com.mockpage.schoolwebapp.schoolpage.home.model.Role;
 import com.mockpage.schoolwebapp.schoolpage.home.repository.AdmissionsRepository;
 import com.mockpage.schoolwebapp.schoolpage.home.repository.CoursesRepository;
 import com.mockpage.schoolwebapp.schoolpage.home.repository.RoleRepository;
 
 @SpringBootApplication
-public class SchoolpageExprmntApplication {
+public class SchoolpagepostgresqlApplication {
 	
-	private static final Logger log = LoggerFactory.getLogger(SchoolpageExprmntApplication.class);
+	private static final Logger log = LoggerFactory.getLogger(SchoolpagepostgresqlApplication.class);
 
 	public static void main(String[] args) {
-		SpringApplication.run(SchoolpageExprmntApplication.class, args);
+		SpringApplication.run(SchoolpagepostgresqlApplication.class, args);
 	}
 	
 	@Bean
 	  public CommandLineRunner demo(AdmissionsRepository admissionsrepo,CoursesRepository coursesrepo,RoleRepository roleRepo) {
 	    return (args) -> {
+			
 			
 			/*
 			 * admissionsrepo.save(new
@@ -66,12 +72,15 @@ public class SchoolpageExprmntApplication {
 			 * )); coursesrepo.save(new Courses("course-1",10,(long) 9,"Biology",
 			 * "Jackson","Loremipsum dolor sit amet consectetur adipisicing elit Vel accusantium impediS. Loremipsum dolor sit amet consectetur adipisicing. Vel accusantium impediS. Loremipsum dolor sit amet consectetur adipisicing elit Vel accusantium impediS. Loremipsum dolor sit amet consectetur adipisicing elit Vel accusantium impediS. Loremipsum dolor sit amet consectetur adipisicing elit Vel accusantium impediS."
 			 * ));
-			 */ 
+			 */
+			  
+			
 			/*
 			 * roleRepo.save(new Role("ADMIN")); roleRepo.save(new Role("TEACHER"));
 			 * roleRepo.save(new Role("PARENT"));roleRepo.save(new Role("USER"));
-			 * 
-			 */			 
+			 */
+			  
+			 			 
 	      
 	      log.info("Admissions and Courses are added.");
 	    };

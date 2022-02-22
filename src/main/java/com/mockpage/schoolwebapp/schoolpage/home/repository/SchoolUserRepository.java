@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.mockpage.schoolwebapp.schoolpage.home.model.SchoolUser;
 
+
 @Repository
 public interface SchoolUserRepository extends JpaRepository<SchoolUser,Long> {
 
